@@ -14,14 +14,19 @@
 //     </div>
 //   );
 // }
+
+import { useState } from "react"
+
 export default function Button() {
+  const [count, setCount] = useState(0);
     function handleClick() {
-      alert ("Clicked!")
+      // alert ("Clicked!")
+      setCount(count + 1)
     }
 
     return (
       <button onClick={handleClick}>
-        Click me!
+        Clicked {count} times
       </button>
     )
   }
