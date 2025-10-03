@@ -35,6 +35,15 @@ h1 {
   line-height: 1.1;
 }
 
+section {
+  width: 400px;
+  height: 480px;
+  margin: 30px;
+  padding: 15px;
+  background: lightgray;
+}
+
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
