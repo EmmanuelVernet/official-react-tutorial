@@ -14,25 +14,35 @@
 //     </div>
 //   );
 // }
+import Profile from "./User.jsx";
+import ShoppingList from "./List.jsx";
 import './index.css';
 
-const user = {
-  name: "Henry Test",
-  imageUrl: "https://i.imgur.com/yXOvdOSs.jpg",
-  imageSize: 90,
-};
 
-export default function Profile () {
+export default function App() {
   return (
     <>
-      <h1>{user.name}</h1>
-      <img className="avatar" src={user.imageUrl} alt={"Photo of " + user.name}
-      style={{
-          width: user.imageSize,
-          height: user.imageSize
-        }}
-      />
+      <div>
+        <Profile />
+      </div>
+      <div>
+        <h1>My shopping list</h1>
+        <ShoppingList />
+      </div>
     </>
+
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
