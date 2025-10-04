@@ -1,23 +1,44 @@
+import { useState } from 'react';
+
 function FilterableProductTable({ products }) {
   const [filterText, setFilterText] = useState("")
   const [inStockOnly] = useState(false)
 
-  return(
+   return (
     <div>
-      <SearchBar filterText={filterText} inStockOnly={inStockOnly}/>
-      <ProductTable products={products} filterText={filterText} inStockOnly={inStockOnly}/>
+      <SearchBar 
+        filterText={filterText} 
+        inStockOnly={inStockOnly} />
+      <ProductTable 
+        products={products}
+        filterText={filterText}
+        inStockOnly={inStockOnly} />
     </div>
-  )
+  );
 }
 
-function ProductRow({product}) {
-  const name = product.stocked ? product.name : <span style={{ color: "red" }}>{product.name}</span>
-  return(
+function ProductCategoryRow({ category }) {
+  return (
+    <tr>
+      <th colSpan="2">
+        {category}
+      </th>
+    </tr>
+  );
+}
+
+function ProductRow({ product }) {
+  const name = product.stocked ? product.name :
+    <span style={{ color: 'red' }}>
+      {product.name}
+    </span>;
+
+  return (
     <tr>
       <td>{name}</td>
       <td>{product.price}</td>
     </tr>
-  )
+  );
 }
 
 function ProductTable({ products, filterText, inStockOnly }) {
@@ -60,11 +81,11 @@ function ProductTable({ products, filterText, inStockOnly }) {
       </thead>
       <tbody>{rows}</tbody>
     </table>
-  )
+  );
 }
 
-function SearchBar({filterText, inStockOnly}) {
-  return(
+function SearchBar({ filterText, inStockOnly }) {
+  return (
     <form>
       <input 
         type="text" 
