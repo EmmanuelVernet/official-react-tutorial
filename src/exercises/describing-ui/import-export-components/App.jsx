@@ -1,15 +1,15 @@
-// import Gallery from "./Gallery.jsx";
 
 // export default function App() {
-//   return (
-//     <Gallery />
-//   )
-// }
-
-import { Profile } from "./Gallery.jsx"
+  //   return (
+    //     <Gallery />
+    //   )
+    // }
+    
+import Gallery from "./Gallery.jsx";
+// import { Profile } from "./Profile.jsx"
 
 export default function App() {
   return (
-    <Profile />
+    <Gallery />
   )
 }
