@@ -1,4 +1,5 @@
 import Avatar from './Avatar.jsx'
+import Clock from './Clock.jsx'
 
 function Card({ children }) {
   return (
@@ -10,6 +11,7 @@ function Card({ children }) {
 
 export default function Profile() {
   return (
+    <div>
     <Card>
       <Avatar
         size={100}
@@ -33,5 +35,6 @@ export default function Profile() {
         }}
       />
       </Card>
+      </div>
   );
 }
