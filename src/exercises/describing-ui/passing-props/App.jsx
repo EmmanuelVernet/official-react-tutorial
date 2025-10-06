@@ -1,20 +1,16 @@
-import { getImageUrl } from './Utils.jsx'
+import Avatar from './Avatar.jsx'
 
-function Avatar({person, size}) {
+function Card({ children }) {
   return (
-    <img
-      className="avatar"
-      src={getImageUrl(person)}
-      alt={person.name}
-      width={size}
-      height={size}
-    />
-  );
+    <div className='card'>
+      {children}
+    </div>
+  )
 }
 
 export default function Profile() {
   return (
-    <div>
+    <Card>
       <Avatar
         size={100}
         person={{ 
@@ -36,6 +32,6 @@ export default function Profile() {
           imageId: '1bX5QH6'
         }}
       />
-    </div>
+      </Card>
   );
 }
