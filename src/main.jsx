@@ -13,7 +13,8 @@ import { createRoot } from 'react-dom/client'
 // import App from './exercises/describing-ui/passing-props/App.jsx'
 // import App from './exercises/describing-ui/conditional-rendering/App.jsx'
 // import App from './exercises/describing-ui/rendering-lists/App.jsx'
-import App from './exercises/adding-interactivity/responding-to-events/App.jsx'
+// import App from './exercises/adding-interactivity/responding-to-events/App.jsx'
+import App from './exercises/adding-interactivity/state-component-memory/App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
